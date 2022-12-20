@@ -18,9 +18,8 @@ function App() {
     }
   ])
   return (
-    <div>
+    <div className='h-screen w-screen'>
       <RouterProvider router={router}>
-
       </RouterProvider>
     </div>
   );
