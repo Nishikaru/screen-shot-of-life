@@ -4,7 +4,7 @@ const ChatBubble = () => {
     return (
         <div className='shadow-lg inline-block text-lg font-medium p-4 rounded-md'>
             <div>
-                this is a text that user posted.
+                This is a text that user posted.
             </div>
         </div>
     );

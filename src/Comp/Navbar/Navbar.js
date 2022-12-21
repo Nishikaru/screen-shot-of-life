@@ -11,7 +11,7 @@ const Navbar = () => {
 
                 <div className='flex gap-3'>
                 <Link className='hover:shadow-lg rounded-md p-2 transition-all' to='/'>Home</Link>
-                <Link className='hover:shadow-lg rounded-md p-2 transition-all'>Memores</Link>
+                <Link className='hover:shadow-lg rounded-md p-2 transition-all' to='/memories'>Memores</Link>
                 <Link className='hover:shadow-lg rounded-md p-2 transition-all'>Plus<sup>+</sup></Link>
                 </div>
 
