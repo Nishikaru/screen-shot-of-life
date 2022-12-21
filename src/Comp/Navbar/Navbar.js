@@ -16,7 +16,7 @@ const Navbar = () => {
                 </div>
 
                 <div>
-                    <Link className='hover:shadow-lg rounded-md p-2 transition-all'>Long in</Link>
+                    <Link className='hover:shadow-lg rounded-md p-2 transition-all'>Log in</Link>
                 </div>
             </nav>
         </div>
