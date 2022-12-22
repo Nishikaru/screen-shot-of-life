@@ -1,0 +1,6 @@
+.optionIcon{
+    display: none;
+}
+.mainBubble:hover .optionIcon{
+    display: flex;
+}
