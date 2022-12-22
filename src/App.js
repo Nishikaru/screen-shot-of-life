@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './Layout/Main';
 import Home from './Pages/Home';
 import Memories from './Pages/Memories';
+import Login from './Pages/Login';
 
 function App() {
   const router = createBrowserRouter([
@@ -18,12 +19,16 @@ function App() {
         {
           path:'/memories',
           element:<Memories/>
+        },
+        {
+          path:'/login',
+          element:<Login/>
         }
       ]
     }
   ])
   return (
-    <div className='h-screen w-screen'>
+    <div className='h-screen w-screen overflow-hidden'>
       <RouterProvider router={router}>
       </RouterProvider>
     </div>
