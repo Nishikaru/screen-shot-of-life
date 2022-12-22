@@ -6,9 +6,9 @@ const LoginBox = () => {
         <div className='w-[800px] h-[500px] shadow-lg mt-[-4em] rounded-md flex flex-row-reverse'>
             
             <LoginForm/>
-            
+
             <div className='w-1/2 flex items-center justify-center '>
-                <h1 className='text-4xl font-semibold capitalize'>
+                <h1 className='text-4xl font-semibold capitalize text-shadow-lg'>
                     Please<br />log in
                 </h1>
             </div>

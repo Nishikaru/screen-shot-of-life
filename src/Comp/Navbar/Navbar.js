@@ -6,7 +6,7 @@ const Navbar = () => {
         <div>
             <nav className='flex justify-between items-center px-80 py-3 transition-all shadow-lg'>
                 <div>
-                <Link className='capitalize text-xl font-medium hover:shadow-lg rounded-md p-2 transition-all' to='/'>screen shot of life</Link>
+                <Link className='capitalize text-xl font-medium hover:shadow-lg rounded-md p-2 transition-all text-shadow-lg' to='/'>screen shot of life</Link>
                 </div>
 
                 <div className='flex gap-3'>
