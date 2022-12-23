@@ -40,11 +40,11 @@ const Login = () => {
         .then(result=>{
             const user = result.user;
             // console.log(user);
-            const currentUser ={
-              email : user.email
-            }
-            if(user){
-                navigate(from,{replace:true})
+            // const currentUser ={
+            //   email : user.email
+            // }
+            if(user.uid){
+                navigate('/')
               }
               setErrorMsg('')
         })
