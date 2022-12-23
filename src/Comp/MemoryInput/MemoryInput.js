@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import {MdSend} from 'react-icons/md'
 import { AuthContext } from '../UserContext/UserContext';
 
-const MemoryInput = () => {
+const MemoryInput = ({setReload}) => {
     const {user} = useContext(AuthContext);
     const sendMemory = async(e)=>{
         e.preventDefault();
@@ -28,7 +28,10 @@ const MemoryInput = () => {
 
         fetch(url,requestOptions)
         .then(res=>res.json())
-        .then(data=>console.log(data))
+        .then(data=>{console.log(data)
+            setReload(data.insertedId)
+            form.memory.value='';
+        })
 
     }
     return (
