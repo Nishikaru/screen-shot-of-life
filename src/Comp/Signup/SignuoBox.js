@@ -1,19 +1,20 @@
 import React from 'react';
-import LoginForm from './LoginForm/LoginForm';
+import SignupForm from './SignupFrom/SignupFrom';
 
-const LoginBox = ({logIn,signinWithGoogle}) => {
+
+const SignupBox = ({newAccount}) => {
     return (
         <div className='w-[800px] h-[500px] shadow-lg mt-[-4em] rounded-md flex flex-row-reverse'>
             
-            <LoginForm signinWithGoogle={signinWithGoogle} logIn={logIn} />
+            <SignupForm newAccount={newAccount} />
 
             <div className='w-1/2 flex items-center justify-center '>
                 <h1 className='text-4xl font-semibold capitalize text-shadow-lg'>
-                    Please<br />log in
+                    Please<br />sign up
                 </h1>
             </div>
         </div>
     );
 };
 
-export default LoginBox;
+export default SignupBox;
