@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../UserContext/UserContext';
 
 const Navbar = () => {
-    const {user,LogOut} = useContext(AuthContext);
+    const {theme,user,LogOut} = useContext(AuthContext);
     // console.log(user.uid)
     return (
         <div>
-            <nav className='flex justify-between items-center px-80 py-3 transition-all shadow-lg'>
+            <nav className={`flex justify-between items-center px-80 py-3 transition-all shadow-lg bg-skin-${theme.MainBg}`}>
                 <div>
                 <Link className='capitalize text-xl font-medium hover:shadow-lg rounded-md p-2 transition-all text-shadow-lg' to='/'>screen shot of life</Link>
                 </div>

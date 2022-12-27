@@ -4,14 +4,15 @@ import ChatBubble from '../ChatBubble/ChatBubble';
 import FixedInput from './FixedInput/FixedInput';
 
 const SsBox = () => {
-    const memories = useLoaderData();
+    const data = useLoaderData();
+    const {allValues,date} =data;
     return (
         <div className='mx-auto p-4 max-w-[80vw] w-[900px] h-[80vh] items-end flex flex-col-reverse overflow-y-auto'>
             <div className='flex flex-col items-end'>
-            {memories.map(memory=><ChatBubble key={memory._id} memory={memory} /> )}
+            {allValues.map(memory=><ChatBubble key={memory._id} memory={memory} /> )}
             </div>
 
-            <FixedInput/>
+            <FixedInput date={date}/>
         </div>
     );
 };

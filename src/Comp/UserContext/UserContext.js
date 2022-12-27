@@ -8,6 +8,29 @@ export const AuthContext = createContext();
 const auth = getAuth(app);
 
 const UserContext = ({children}) => {
+
+    // theme
+    const [theme,setTheme] = useState('light')
+
+    const themech = (color)=>{
+        if(color=='dark'){
+            setTheme({
+        MainText:'dark',
+        MainBg:'DarkMain',
+        SecBg:'DarkSec',
+    })
+    console.log(theme)
+        }else{
+            setTheme({
+                MainText:'light',
+                MainBg:'LightMain',
+                SecBg:'LightSec',
+            })
+            console.log(theme)
+        }
+    }
+    
+
     // loading
     const [loading,setLoading] = useState(true)
     // user
@@ -53,7 +76,7 @@ useEffect(()=>{
 },[])
 
     // sending data from here
-    const info ={setLoading,loading,user,signupWithEmail,updateName,loginWithMail,goWithGoogle,LogOut,re,setRe}
+    const info ={theme,themech,setLoading,loading,user,signupWithEmail,updateName,loginWithMail,goWithGoogle,LogOut,re,setRe}
     return (
         <div>
             <AuthContext.Provider value={info} >

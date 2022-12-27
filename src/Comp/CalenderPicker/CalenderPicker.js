@@ -6,18 +6,24 @@ import { AuthContext } from '../UserContext/UserContext';
 
 const CalendarPicker = () => {
   const navigate = useNavigate();
+  const [counter,setCounter] = useState(0)
 
   const {user} = useContext(AuthContext);
   const [value, onChange] = useState(new Date());
   useEffect(()=>{
     if(value.toLocaleDateString()==new Date().toLocaleDateString()){
+      if(counter>0){
+        navigate('/')
+      }else{
+        setCounter(1);
+      }
     }else{
       console.log(value.toLocaleDateString())
       navigate(`/memory/${user.email}/${value.toLocaleDateString()}`)
     }
   },[value])
   return (
-    <div className='shadow-lg text-xl'>
+    <div className='shadow-lg text-xl ch text-black'>
       <Calendar className='rounded-md' onChange={onChange} value={value} />
     </div>
   );
