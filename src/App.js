@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import Memories from './Pages/Memories';
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
+import Memory from './Pages/Memory';
 
 function App() {
   const router = createBrowserRouter([
@@ -28,6 +29,15 @@ function App() {
         {
           path:'/signup',
           element:<SignUp/>
+        },
+        {
+          path:'/memory/:email/:mm/:dd/:yy',
+          element:<Memory/>,
+          loader:async({params})=>{
+            console.log(params.mm)
+            return fetch(
+            `http://localhost:5000/memories/${params.email}/${params.mm}/${params.dd}/${params.yy}`
+          )}
         }
       ]
     }

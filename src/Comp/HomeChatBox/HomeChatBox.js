@@ -8,7 +8,7 @@ const HomeChatBox = () => {
     const {user} = useContext(AuthContext);
     const [memories,setMemories] = useState([]);
     const [reload,setReload] = useState()
-    console.log(user)
+    // console.log(user)
     useEffect(()=>{
         fetch(`http://localhost:5000/user/${user?.email}`)
         .then(res=>res.json())

@@ -9,13 +9,15 @@ const MemoryInput = ({setReload}) => {
         const form = e.target
         const memory = form.memory.value;
 
+        console.log(new Date().toLocaleTimeString());
         const data = {
             memory:memory,
-            time: new Date(),
+            date:new Date().toLocaleDateString(),
+            time: new Date().toLocaleTimeString() ,
             user:user?.email
         }
 
-        console.log(data)
+        // console.log(data)
 
         const requestOptions = {
 
