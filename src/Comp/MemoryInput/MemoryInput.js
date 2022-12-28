@@ -37,10 +37,10 @@ const MemoryInput = ({setReload}) => {
 
     }
     return (
-        <div onSubmit={sendMemory} className='absolute bottom-0 left-0  w-screen p-4'>
-            <form className='flex w-[900px] mx-auto justify-around'>
-                <input className='w-[700px] max-w-[70vw] rounded-md border-2 border-black p-2' placeholder='Memory' type="text" name='memory' />
-                <button className='text-3xl rounded-full hover:shadow-lg p-2 transition-all' type='submit'><MdSend/></button>
+        <div onSubmit={sendMemory} className='absolute bottom-0 left-0  w-screen py-4 md:p-4'>
+            <form className='flex w-[100vw] md:w-[60vw] mx-auto justify-around'>
+                <input className='w-full md:w-[50vw] max-w-[70vw] rounded-md border-2 border-black p-2' placeholder='Memory' type="text" name='memory' />
+                <button className='text-3xl rounded-full hover:shadow-lg py-2 transition-all' type='submit'><MdSend/></button>
             </form>
         </div>
     );

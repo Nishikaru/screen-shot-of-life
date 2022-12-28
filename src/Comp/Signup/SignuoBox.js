@@ -4,7 +4,7 @@ import SignupForm from './SignupFrom/SignupFrom';
 
 const SignupBox = ({newAccount}) => {
     return (
-        <div className='w-[800px] h-[500px] shadow-lg mt-[-4em] rounded-md flex flex-row-reverse'>
+        <div className='md:w-[800px] md:h-[500px] shadow-lg mt-[-4em] justify-center items-center gap-4 md:gap-0 p-4 md:p-0 rounded-md flex flex-col-reverse md:flex-row-reverse'>
             
             <SignupForm newAccount={newAccount} />
 

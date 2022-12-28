@@ -15,7 +15,7 @@ const LoginForm = ({logIn,signinWithGoogle}) => {
                 <hr className='w-full' />
             </div>
             <div>
-                <button onClick={signinWithGoogle} className='uppercase p-2 shadow-lg font-semibold rounded-md flex items-center gap-3 hover:shadow-xl transition-all hover:translate-x-1'><span><FcGoogle/></span> Continue with google</button>
+                <button onClick={signinWithGoogle} className='uppercase p-2 shadow-lg font-semibold rounded-md flex items-center gap-3 hover:shadow-xl transition-all hover:translate-x-1 min-w-[250px]'><span><FcGoogle/></span> Continue with google</button>
             </div>
         </div>
     );
